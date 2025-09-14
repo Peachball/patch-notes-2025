@@ -103,14 +103,8 @@ health_component = NodePath("HealthComponent")
 fall_damage_component = NodePath("FallDamageComponent")
 metadata/_edit_group_ = true
 
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3nfmf")
-=======
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(3, 3)
-polygon = PackedVector2Array(-1, -1, 0.666667, -1, 0.666666, 1.05, 0.333333, 1.33333, -0.666667, 1.33333, -1, 1)
->>>>>>> 7740891c4aabe4e734471386efff0992c73aa2c5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
