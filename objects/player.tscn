@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://rndu7vd4klo8" path="res://scenes/components/gravity_component.tscn" id="3_uxov2"]
 [ext_resource type="PackedScene" uid="uid://rav4bumd4iy7" path="res://scenes/components/input_component.tscn" id="4_f46kd"]
 [ext_resource type="Texture2D" uid="uid://qlgh5w1gx3eb" path="res://assets/player/playerGrey_walk2.png" id="4_i825w"]
-[ext_resource type="PackedScene" path="res://scenes/components/movement_component.tscn" id="5_3rerk"]
-[ext_resource type="PackedScene" path="res://scenes/components/animation_component.tscn" id="7_i825w"]
-[ext_resource type="PackedScene" path="res://scenes/components/jump_component.tscn" id="8_3rfka"]
+[ext_resource type="PackedScene" uid="uid://buvqtqvjs7xyd" path="res://scenes/components/movement_component.tscn" id="5_3rerk"]
+[ext_resource type="PackedScene" uid="uid://c0fr2eajw41q6" path="res://scenes/components/animation_component.tscn" id="7_i825w"]
+[ext_resource type="PackedScene" uid="uid://d1xktuy8xayqs" path="res://scenes/components/jump_component.tscn" id="8_3rfka"]
 [ext_resource type="PackedScene" uid="uid://b2mi1j0ctgk65" path="res://scenes/components/health_component.tscn" id="9_i8sra"]
 [ext_resource type="PackedScene" uid="uid://cfhb3t7r5kcfq" path="res://scenes/components/fall_damage_component.tscn" id="10_4vq5b"]
 
@@ -63,3 +63,9 @@ sprite = NodePath("../AnimatedSprite2D")
 [node name="HealthComponent" parent="." instance=ExtResource("9_i8sra")]
 
 [node name="FallDamageComponent" parent="." instance=ExtResource("10_4vq5b")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
