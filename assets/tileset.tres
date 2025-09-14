@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://cxqxxo8bijdat"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://bmiuweksdudns"]
 
 [ext_resource type="Texture2D" uid="uid://d1ehi2d01br10" path="res://assets/tilesheet/tiles_backgroundbuildingtiles.png" id="1_7lii3"]
 [ext_resource type="Texture2D" uid="uid://cfrxuvfehamal" path="res://assets/tilesheet/tiles_blocks.png" id="2_uyjym"]

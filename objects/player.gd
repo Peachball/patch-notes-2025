@@ -32,6 +32,5 @@ func _on_player_died() -> void:
 func _on_fall_damage_dealt(damage_amount: int) -> void:
 	print("Took ", damage_amount, " fall damage!")
 
-
 func _on_timer_timeout() -> void:
 	input_component.randomize_controls()
