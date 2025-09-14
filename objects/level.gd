@@ -39,6 +39,13 @@ func generate_background():
 	var y_max := level_height() + BACKGROUND_EXTENSION
 	for x in range(x_min, x_max):
 		for y in range(y_min, y_max):
+			if x < 0 or y <= 0 or x > WIDTH_IN_TILES or y >= level_height():
+				$background.set_cell(
+					Vector2i(x, y),
+					7,
+					Vector2i(2, 2)
+				)
+				continue
 			var noise_value := normalize(
 				noise.get_noise_2d(x*10, y*10),
 				-1,
