@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dx3rnegff3hji"]
+[gd_scene load_steps=21 format=3 uid="uid://dx3rnegff3hji"]
 
 [ext_resource type="Script" uid="uid://k18i8dvjsp6q" path="res://objects/player.gd" id="1_f46kd"]
 [ext_resource type="Texture2D" uid="uid://3xx3ostslq1l" path="res://assets/player/sprite_idle.png" id="2_3nfmf"]
@@ -12,10 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://b2mi1j0ctgk65" path="res://scenes/components/health_component.tscn" id="9_i8sra"]
 [ext_resource type="PackedScene" uid="uid://cfhb3t7r5kcfq" path="res://scenes/components/fall_damage_component.tscn" id="10_4vq5b"]
 [ext_resource type="Theme" uid="uid://b1sybcvhs5s88" path="res://assets/theme.tres" id="12_42cpl"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3nfmf"]
-radius = 3.0
-height = 8.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3nfmf"]
 atlas = ExtResource("3_42cpl")

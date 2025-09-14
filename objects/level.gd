@@ -85,10 +85,7 @@ func generate_level() -> void:
 	for i in range(NUM_LAYERS):
 		var saw_midpoint := randi_range(0, WIDTH_IN_TILES-1)
 		var spawn_position := Vector2i(saw_midpoint, i * HEIGHT_GAP + STARTING_DELAY)
-		if randi_range(0, 1) == 0:
-			spawn_saw(spawn_position)
-		else:
-			spawn_platform(spawn_position)
+		spawn_platform(spawn_position)
 	
 	for i in range(level_height() + 10):
 		$platforms.set_cell(

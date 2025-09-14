@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://4f3iaa3yxncu"]
+[gd_scene load_steps=4 format=3 uid="uid://4f3iaa3yxncu"]
 
 [ext_resource type="Script" uid="uid://bp02p3ofr3r4l" path="res://objects/level.gd" id="1_dk26l"]
 [ext_resource type="TileSet" uid="uid://bmiuweksdudns" path="res://assets/tileset.tres" id="2_ves5e"]
@@ -13,7 +13,6 @@ tile_set = ExtResource("2_ves5e")
 collision_enabled = false
 
 [node name="platforms" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAFAAIABwAKAA8AAAAGAAIABwALAA8AAAAHAAIABwAMAA8AAAAFAAMABwACAAUAAAAGAAMABwACAAUAAAAHAAMABwACAAUAAAAAAAcABwAKAA8AAAAAAAgABwACAAUAAAABAAcABwALAA8AAAABAAgABwACAAUAAAACAAcABwAMAA8AAAACAAgABwACAAUAAAA=")
 tile_set = ExtResource("2_ves5e")
 
 [node name="Player" parent="." instance=ExtResource("3_g8fix")]
