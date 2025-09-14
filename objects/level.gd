@@ -9,22 +9,11 @@ func _ready() -> void:
 func setup_player_tracking() -> void:
 	var player = $Player
 	if player and $Player/HealthComponent:
-		$"Health Label".text = "Health: " + str($Player/HealthComponent.current_health)
 		$Player/HealthComponent.health_changed.connect(_on_player_health_changed)
 		$Player/HealthComponent.died.connect(_on_player_died)
 	
 	if player and player.get_node("Timer"):
 		player.get_node("Timer").timeout.connect(_on_controls_scrambled)
-
-func _process(delta: float) -> void:
-	update_countdown_display()
-
-func update_countdown_display() -> void:
-	var player = $Player
-	if player and player.get_node("Timer"):
-		var timer = player.get_node("Timer")
-		var time_left = timer.time_left
-		$"Countdown Label".text = "Controls scramble in: " + str(int(ceil(time_left))) + "s"
 
 func _on_player_health_changed(new_health: int) -> void:
 	print("Player health: ", new_health)

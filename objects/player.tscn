@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dx3rnegff3hji"]
+[gd_scene load_steps=22 format=3 uid="uid://dx3rnegff3hji"]
 
 [ext_resource type="Script" uid="uid://k18i8dvjsp6q" path="res://objects/player.gd" id="1_f46kd"]
 [ext_resource type="Texture2D" uid="uid://3xx3ostslq1l" path="res://assets/player/sprite_idle.png" id="2_3nfmf"]
@@ -11,10 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://d1xktuy8xayqs" path="res://scenes/components/jump_component.tscn" id="8_3rfka"]
 [ext_resource type="PackedScene" uid="uid://b2mi1j0ctgk65" path="res://scenes/components/health_component.tscn" id="9_i8sra"]
 [ext_resource type="PackedScene" uid="uid://cfhb3t7r5kcfq" path="res://scenes/components/fall_damage_component.tscn" id="10_4vq5b"]
+[ext_resource type="Theme" uid="uid://b1sybcvhs5s88" path="res://assets/theme.tres" id="12_42cpl"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykyjo"]
-radius = 1.0
-height = 3.33333
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3nfmf"]
+radius = 3.0
+height = 8.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3nfmf"]
 atlas = ExtResource("3_42cpl")
@@ -102,14 +103,12 @@ health_component = NodePath("HealthComponent")
 fall_damage_component = NodePath("FallDamageComponent")
 metadata/_edit_group_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(3, 3)
-polygon = PackedVector2Array(-1, -1, 0.666667, -1, 0.666667, 1.33333, -1, 1.33333)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3nfmf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_bhqug")
-animation = &"jump"
 animation = &"fall"
 metadata/_edit_lock_ = true
 
@@ -134,5 +133,21 @@ autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(3, 3)
+
+[node name="Timer Status" type="RichTextLabel" parent="."]
+offset_left = -40.0
+offset_top = -85.0
+offset_right = 156.0
+offset_bottom = -61.0
+theme = ExtResource("12_42cpl")
+horizontal_alignment = 2
+
+[node name="Health Status" type="RichTextLabel" parent="."]
+offset_left = -3.0
+offset_top = -63.0
+offset_right = 156.0
+offset_bottom = -39.0
+theme = ExtResource("12_42cpl")
+horizontal_alignment = 2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://4f3iaa3yxncu"]
+[gd_scene load_steps=4 format=4 uid="uid://4f3iaa3yxncu"]
 
 [ext_resource type="Script" uid="uid://bp02p3ofr3r4l" path="res://objects/level.gd" id="1_dk26l"]
 [ext_resource type="TileSet" uid="uid://bmiuweksdudns" path="res://assets/tileset.tres" id="2_ves5e"]
 [ext_resource type="PackedScene" uid="uid://dx3rnegff3hji" path="res://objects/player.tscn" id="3_g8fix"]
-[ext_resource type="Theme" uid="uid://b1sybcvhs5s88" path="res://assets/theme.tres" id="4_3na48"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_dk26l")
@@ -14,20 +13,3 @@ tile_set = ExtResource("2_ves5e")
 
 [node name="Player" parent="." instance=ExtResource("3_g8fix")]
 position = Vector2(20.8123, 22.1809)
-
-[node name="Health Label" type="RichTextLabel" parent="."]
-offset_left = 231.0
-offset_top = 3.0
-offset_right = 316.0
-offset_bottom = 24.0
-theme = ExtResource("4_3na48")
-fit_content = true
-horizontal_alignment = 2
-
-[node name="Countdown Label" type="RichTextLabel" parent="."]
-offset_left = 119.0
-offset_top = 25.0
-offset_right = 316.0
-offset_bottom = 49.0
-theme = ExtResource("4_3na48")
-horizontal_alignment = 2

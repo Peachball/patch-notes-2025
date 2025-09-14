@@ -13,8 +13,15 @@ func _ready() -> void:
 	$Timer.start()
 	if health_component:
 		health_component.died.connect(_on_player_died)
+		health_component.health_changed.connect(_on_player_health_changed)
+		$"Health Status".text = "Health: " + str(health_component.current_health)
 	if fall_damage_component:
 		fall_damage_component.fall_damage_dealt.connect(_on_fall_damage_dealt)
+		
+	
+
+func _process(delta: float) -> void:
+	update_countdown_display()
 
 func _physics_process(delta: float) -> void:
 	gravity_component.handle_gravity(self, delta)
@@ -34,3 +41,10 @@ func _on_fall_damage_dealt(damage_amount: int) -> void:
 
 func _on_timer_timeout() -> void:
 	input_component.randomize_controls()
+	
+func update_countdown_display() -> void:
+	var time_left = $Timer.time_left
+	$"Timer Status".text = "Controls scramble in: " + str(int(ceil(time_left))) + "s"
+
+func _on_player_health_changed(new_health: int) -> void:
+	$"Health Status".text = "Health: " + str(new_health)
