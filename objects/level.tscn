@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=4 uid="uid://4f3iaa3yxncu"]
+[gd_scene load_steps=4 format=4 uid="uid://4f3iaa3yxncu"]
 
 [ext_resource type="Script" uid="uid://bp02p3ofr3r4l" path="res://objects/level.gd" id="1_dk26l"]
 [ext_resource type="TileSet" uid="uid://cxqxxo8bijdat" path="res://assets/tileset.tres" id="2_ves5e"]
+[ext_resource type="PackedScene" uid="uid://dx3rnegff3hji" path="res://objects/player.tscn" id="3_g8fix"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_dk26l")
 
 [node name="platforms" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAFAAIABwAKAA8AAAAGAAIABwALAA8AAAAHAAIABwAMAA8AAAAFAAMABwACAAUAAAAGAAMABwACAAUAAAAHAAMABwACAAUAAAA=")
+tile_map_data = PackedByteArray("AAAFAAIABwAKAA8AAAAGAAIABwALAA8AAAAHAAIABwAMAA8AAAAFAAMABwACAAUAAAAGAAMABwACAAUAAAAHAAMABwACAAUAAAAAAAcABwAKAA8AAAAAAAgABwACAAUAAAABAAcABwALAA8AAAABAAgABwACAAUAAAACAAcABwAMAA8AAAACAAgABwACAAUAAAA=")
 tile_set = ExtResource("2_ves5e")
+
+[node name="Player" parent="." instance=ExtResource("3_g8fix")]
+position = Vector2(20.8123, 22.1809)
