@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgtcauattfwly"]
 
-[ext_resource type="Texture2D" uid="uid://2bm73gpicwmc" path="res://temp_assets/tilesheet_complete.png" id="1_irrpc"]
+[ext_resource type="Texture2D" uid="uid://2bm73gpicwmc" path="res://assets/tilesheet/tilesheet_complete.png" id="1_irrpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pox3o"]
 resource_name = "temp"
