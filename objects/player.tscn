@@ -103,13 +103,13 @@ health_component = NodePath("HealthComponent")
 fall_damage_component = NodePath("FallDamageComponent")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_3nfmf")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-1.66667, -2, 1.33333, -2, 1.33333, 2.33333, 0.666667, 2.66667, -1, 2.66667, -2, 2.33333)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_bhqug")
-animation = &"fall"
+animation = &"run"
 metadata/_edit_lock_ = true
 
 [node name="GravityComponent" parent="." instance=ExtResource("3_uxov2")]
