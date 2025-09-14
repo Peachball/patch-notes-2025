@@ -9,10 +9,11 @@
 script = ExtResource("1_dk26l")
 
 [node name="platforms" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAFAAIABwAKAA8AAAAGAAIABwALAA8AAAAHAAIABwAMAA8AAAAFAAMABwACAAUAAAAGAAMABwACAAUAAAAHAAMABwACAAUAAAA=")
+tile_map_data = PackedByteArray("AAAFAAIABwAKAA8AAAAGAAIABwALAA8AAAAHAAIABwAMAA8AAAAFAAMABwACAAUAAAAGAAMABwACAAUAAAAHAAMABwACAAUAAAAAAAcABwAKAA8AAAAAAAgABwACAAUAAAABAAcABwALAA8AAAABAAgABwACAAUAAAACAAcABwAMAA8AAAACAAgABwACAAUAAAA=")
 tile_set = ExtResource("2_ves5e")
 
 [node name="Player" parent="." instance=ExtResource("3_g8fix")]
+position = Vector2(20.8123, 22.1809)
 
 [node name="Health Label" type="RichTextLabel" parent="."]
 offset_left = 231.0
