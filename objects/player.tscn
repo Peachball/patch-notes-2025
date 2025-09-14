@@ -12,10 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://b2mi1j0ctgk65" path="res://scenes/components/health_component.tscn" id="9_i8sra"]
 [ext_resource type="PackedScene" uid="uid://cfhb3t7r5kcfq" path="res://scenes/components/fall_damage_component.tscn" id="10_4vq5b"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykyjo"]
-radius = 1.0
-height = 3.33333
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_3nfmf"]
 atlas = ExtResource("3_42cpl")
 region = Rect2(48, 0, 16, 16)
@@ -109,7 +105,6 @@ polygon = PackedVector2Array(-1, -1, 0.666667, -1, 0.666666, 1.05, 0.333333, 1.3
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_bhqug")
-animation = &"jump"
 animation = &"fall"
 metadata/_edit_lock_ = true
 
