@@ -104,7 +104,7 @@ metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2(3, 3)
-polygon = PackedVector2Array(-1, -1, 0.666667, -1, 0.666667, 1.33333, -1, 1.33333)
+polygon = PackedVector2Array(-1, -1, 0.666667, -1, 0.666666, 1.05, 0.333333, 1.33333, -0.666667, 1.33333, -1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -134,5 +134,6 @@ autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(3, 3)
+offset = Vector2(0, 70)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
