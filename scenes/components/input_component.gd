@@ -2,7 +2,11 @@ class_name InputComponent
 extends Node
 
 var input_horizontal: float = 0.0
-var control_mappings: Dictionary = {}
+var control_mappings: Dictionary = {
+	"move_left": "move_left",
+	"move_right": "move_right",
+	"jump": "jump"
+}
 var controls_scrambled: bool = false
 
 func _process(delta: float) -> void:
