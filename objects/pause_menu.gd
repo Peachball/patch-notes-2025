@@ -1,12 +1,12 @@
 extends CanvasLayer
 
 var menu := preload("res://scenes/menu.tscn")
-var time_since_start := 0
-var pause_delay := 1
+var time_since_start := 0.0
+var pause_delay := 0.5
 
 func _process(delta: float) -> void:
 	time_since_start += delta
-	if Input.is_action_just_pressed("pause") and time_since_start > pause_delay:
+	if Input.is_action_just_pressed("pause") and visible and time_since_start > pause_delay:
 		resume()
 
 func resume() -> void:
