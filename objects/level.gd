@@ -10,6 +10,7 @@ func _ready() -> void:
 	generate_level()
 	generate_background()
 	setup_player_tracking()
+	setup_end_audio()
 
 func setup_player_tracking() -> void:
 	var player = $Player
@@ -125,3 +126,9 @@ func spawn_platform(position: Vector2i):
 		7,
 		Vector2i(9, 9)
 	)
+
+func setup_end_audio():	
+	# Position at bottom center of tower
+	var bottom_y = level_height() * 16  # Convert tiles to pixels (16px per tile)
+	var center_x = (WIDTH_IN_TILES * 16) / 2
+	$"Hell's Choir".position = Vector2(center_x, bottom_y)
