@@ -5,6 +5,7 @@ const MAX_DISTANCE := 3
 const NUM_LAYERS := 100
 const STARTING_DELAY := 5
 const WIDTH_IN_TILES := 15
+const TILE_WIDTH := 16
 
 func _ready() -> void:
 	generate_level()
@@ -16,6 +17,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		get_tree().paused = true
 		$PauseMenu.visible = true
+	if $Player.position.y > (level_height() - 5) * TILE_WIDTH:
+		GameState.last_won = true
+		get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
 
 func setup_player_tracking() -> void:
 	var player = $Player

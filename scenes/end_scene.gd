@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready() -> void:
+	set_win_status(GameState.last_won)
+
 func set_win_status(is_win: bool) -> void:
 	$winLabel.visible = is_win
 	$loseLabel.visible = !is_win
