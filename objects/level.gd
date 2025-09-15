@@ -40,6 +40,13 @@ func generate_background():
 	var y_max := level_height() + BACKGROUND_EXTENSION
 	for x in range(x_min, x_max):
 		for y in range(y_min, y_max):
+			if x < 0 or y <= 0 or x > WIDTH_IN_TILES or y >= level_height():
+				$background.set_cell(
+					Vector2i(x, y),
+					7,
+					Vector2i(2, 2)
+				)
+				continue
 			var noise_value := normalize(
 				noise.get_noise_2d(x*10, y*10),
 				-1,
@@ -79,10 +86,7 @@ func generate_level() -> void:
 	for i in range(NUM_LAYERS):
 		var saw_midpoint := randi_range(0, WIDTH_IN_TILES-1)
 		var spawn_position := Vector2i(saw_midpoint, i * HEIGHT_GAP + STARTING_DELAY)
-		if randi_range(0, 1) == 0:
-			spawn_saw(spawn_position)
-		else:
-			spawn_platform(spawn_position)
+		spawn_platform(spawn_position)
 	
 	for i in range(level_height() + 10):
 		$platforms.set_cell(
