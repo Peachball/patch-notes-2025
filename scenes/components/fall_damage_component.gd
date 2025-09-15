@@ -3,7 +3,7 @@ extends Node
 
 @export_subgroup("Settings")
 @export var safe_fall_time: float = 1.0
-@export var damage_thresholds: Array[float] = [1.5, 3.0, 4.5]
+@export var damage_thresholds: Array[float] = [2.0, 4.0, 6.0]
 @export var damage_amounts: Array[int] = [1, 2, 3]
 
 var fall_time: float = 0.0

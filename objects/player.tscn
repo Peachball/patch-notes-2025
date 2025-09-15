@@ -124,7 +124,7 @@ sprite = NodePath("../AnimatedSprite2D")
 [node name="FallDamageComponent" parent="." instance=ExtResource("10_4vq5b")]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 15.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
