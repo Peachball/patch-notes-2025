@@ -131,6 +131,12 @@ func spawn_platform(position: Vector2i):
 		Vector2i(9, 9)
 	)
 
+func setup_start_audio():	
+	# Position at bottom center of tower
+	var top_y = 0  # Convert tiles to pixels (16px per tile)
+	var center_x = (WIDTH_IN_TILES * 16) / 2
+	$"Heaven's Choir".position = Vector2(center_x, top_y)
+
 func setup_end_audio():	
 	# Position at bottom center of tower
 	var bottom_y = level_height() * 16  # Convert tiles to pixels (16px per tile)

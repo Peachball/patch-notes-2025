@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl7adrxugsulx"]
+[gd_scene load_steps=6 format=3 uid="uid://cl7adrxugsulx"]
 
 [ext_resource type="Script" uid="uid://bp02p3ofr3r4l" path="res://objects/level.gd" id="1_dk26l"]
 [ext_resource type="TileSet" uid="uid://bmiuweksdudns" path="res://assets/tileset.tres" id="2_ves5e"]
 [ext_resource type="PackedScene" uid="uid://dx3rnegff3hji" path="res://objects/player.tscn" id="3_g8fix"]
-[ext_resource type="AudioStream" uid="uid://ccndapy2godko" path="res://assets/music/music_going down.wav" id="4_3na48"]
+[ext_resource type="AudioStream" uid="uid://41va4h7hvb3d" path="res://assets/music/takedown (audio-extractor.net).wav" id="4_3na48"]
+[ext_resource type="AudioStream" uid="uid://ccndapy2godko" path="res://assets/music/music_going down.wav" id="5_lp32b"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_dk26l")
@@ -21,7 +22,16 @@ position = Vector2(20.8123, 22.1809)
 
 [node name="Hell\'s Choir" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_3na48")
+volume_db = -1.0
 autoplay = true
 max_distance = 10000.0
-attenuation = 5.0
+attenuation = 10.0
+bus = &"Background Music"
+
+[node name="Heaven\'s Choir" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_lp32b")
+volume_db = -1.0
+autoplay = true
+max_distance = 6000.0
+attenuation = 2.0
 bus = &"Background Music"
