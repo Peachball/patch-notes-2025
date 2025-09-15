@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://dyh4nq8j02p0o"]
+[gd_scene load_steps=3 format=3 uid="uid://dyh4nq8j02p0o"]
+
+[ext_resource type="Script" uid="uid://dv5lj5ik826yr" path="res://scenes/menu.gd" id="1_vjb58"]
+[ext_resource type="Theme" uid="uid://b1sybcvhs5s88" path="res://assets/theme.tres" id="1_yqeox"]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_vjb58")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 111.0
+offset_top = 114.0
+offset_right = 195.0
+offset_bottom = 145.0
+theme = ExtResource("1_yqeox")
+text = "Play"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 104.0
+offset_top = 28.0
+offset_right = 210.0
+offset_bottom = 55.0
+text = "Falling castle"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

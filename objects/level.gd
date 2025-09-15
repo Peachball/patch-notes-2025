@@ -12,6 +12,11 @@ func _ready() -> void:
 	setup_player_tracking()
 	setup_end_audio()
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("pause"):
+		get_tree().paused = true
+		$PauseMenu.visible = true
+
 func setup_player_tracking() -> void:
 	var player = $Player
 	if player and $Player/HealthComponent:
