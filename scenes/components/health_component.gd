@@ -14,6 +14,7 @@ func _ready() -> void:
 func take_damage(amount: int = 1) -> void:
 	current_health = max(0, current_health - amount)
 	health_changed.emit(current_health)
+	$AudioStreamPlayer.play()
 	
 	if current_health <= 0:
 		died.emit()
