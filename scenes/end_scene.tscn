@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://brb5n6ulotc77"]
+
+[ext_resource type="Theme" uid="uid://b1sybcvhs5s88" path="res://assets/theme.tres" id="1_nld2j"]
+[ext_resource type="Script" uid="uid://k365pabqp86d" path="res://scenes/end_scene.gd" id="1_s7dif"]
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_s7dif")
+
+[node name="loseLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 128.0
+offset_top = 25.0
+offset_right = 231.0
+offset_bottom = 57.0
+theme = ExtResource("1_nld2j")
+text = "You Lose"
+
+[node name="winLabel" type="RichTextLabel" parent="."]
+offset_left = 123.0
+offset_top = 35.0
+offset_right = 226.0
+offset_bottom = 67.0
+theme = ExtResource("1_nld2j")
+text = "You Win"
+
+[node name="menuButton" type="Button" parent="."]
+offset_left = 127.0
+offset_top = 127.0
+offset_right = 180.0
+offset_bottom = 158.0
+text = "Menu"
+
+[node name="replayButton" type="Button" parent="."]
+offset_left = 109.0
+offset_top = 89.0
+offset_right = 197.0
+offset_bottom = 120.0
+text = "Play Again"
+
+[connection signal="pressed" from="menuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="replayButton" to="." method="_on_replay_button_pressed"]

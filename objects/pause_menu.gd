@@ -7,7 +7,6 @@ var pause_delay := 1
 func _process(delta: float) -> void:
 	time_since_start += delta
 	if Input.is_action_just_pressed("pause") and time_since_start > pause_delay:
-		print("resuming")
 		resume()
 
 func resume() -> void:
